@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="30" failures="1" name="TestSuite" time="748.16" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="13.0.2+8"/>
+    <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/13.0.2+8_2/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/barrettratliff/Documents/GEDWeb/sauce/GED"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/barrettratliff/Documents/GEDWeb/sauce/GED"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="13.0.2+8"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/5l/j2dpvxsx5tq22gt8b4942kyw0000gn/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/usr/local/Cellar/maven/3.6.3_1/libexec/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/barrettratliff/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="maven.conf" value="/usr/local/Cellar/maven/3.6.3_1/libexec/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="57.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.13.6"/>
+    <property name="library.jansi.path" value="/usr/local/Cellar/maven/3.6.3_1/libexec/lib/jansi-native"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/barrettratliff"/>
+    <property name="user.timezone" value="America/New_York"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="13"/>
+    <property name="user.name" value="barrettratliff"/>
+    <property name="java.class.path" value="/usr/local/Cellar/maven/3.6.3_1/libexec/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="13"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="java.home" value="/usr/local/Cellar/openjdk/13.0.2+8_2/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="13.0.2"/>
+    <property name="java.vendor" value="N/A"/>
+    <property name="maven.home" value="/usr/local/Cellar/maven/3.6.3_1/libexec"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2020-01-14"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase classname="com.yourcompany.Tests.PAOIEndpointTest" name="verifyPAOIEndpointTest" time="11.22"/>
+  <testcase classname="com.yourcompany.Tests.PAOIEndpointTest" name="verifyPAOIEndpointTest" time="11.331"/>
+  <testcase classname="com.yourcompany.Tests.PAOIEndpointTest" name="verifyPAOIEndpointTest" time="11.629"/>
+  <testcase classname="com.yourcompany.Tests.PAOIEndpointTest" name="verifyPAOIEndpointTest" time="12.009"/>
+  <testcase classname="com.yourcompany.Tests.PAOIEndpointTest" name="verifyPAOIEndpointTest" time="12.24"/>
+  <testcase classname="com.yourcompany.Tests.PAOIEndpointTest" name="verifyPAOIEndpointTest" time="12.307"/>
+  <testcase classname="com.yourcompany.Tests.PAOIEndpointTest" name="verifyPAOIEndpointTest" time="16.508"/>
+  <testcase classname="com.yourcompany.Tests.PAOIEndpointTest" name="verifyPAOIEndpointTest" time="17.082"/>
+  <testcase classname="com.yourcompany.Tests.PAOIEndpointTest" name="verifyPAOIEndpointTest" time="17.655"/>
+  <testcase classname="com.yourcompany.Tests.PAOIEndpointTest" name="verifyPAOIEndpointTest" time="17.934"/>
+  <testcase classname="com.yourcompany.Tests.FollowLinkTest" name="verifyContactLinkTest" time="18.377"/>
+  <testcase classname="com.yourcompany.Tests.FollowLinkTest" name="verifyContactLinkTest" time="18.828"/>
+  <testcase classname="com.yourcompany.Tests.FollowLinkTest" name="verifyContactLinkTest" time="18.956"/>
+  <testcase classname="com.yourcompany.Tests.FollowLinkTest" name="verifyContactLinkTest" time="19.193"/>
+  <testcase classname="com.yourcompany.Tests.FollowLinkTest" name="verifyContactLinkTest" time="19.703"/>
+  <testcase classname="com.yourcompany.Tests.FollowLinkTest" name="verifyContactLinkTest" time="20.43"/>
+  <testcase classname="com.yourcompany.Tests.FollowLinkTest" name="verifyContactLinkTest" time="20.928"/>
+  <testcase classname="com.yourcompany.Tests.FollowLinkTest" name="verifyContactLinkTest" time="23.171"/>
+  <testcase classname="com.yourcompany.Tests.FollowLinkTest" name="verifyContactLinkTest" time="25.168"/>
+  <testcase classname="com.yourcompany.Tests.FollowLinkTest" name="verifyContactLinkTest" time="26.454"/>
+  <testcase classname="com.yourcompany.Tests.ContactFormTest" name="contactFormTest" time="32.657"/>
+  <testcase classname="com.yourcompany.Tests.ContactFormTest" name="contactFormTest" time="33.046"/>
+  <testcase classname="com.yourcompany.Tests.ContactFormTest" name="contactFormTest" time="33.07"/>
+  <testcase classname="com.yourcompany.Tests.ContactFormTest" name="contactFormTest" time="33.656"/>
+  <testcase classname="com.yourcompany.Tests.ContactFormTest" name="contactFormTest" time="37.59">
+    <failure message="Failed to convert data to an object
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;itako2007.prod.miso&apos;, ip: &apos;fe80:0:0:0:1c26:12dd:b30:768c%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.1&apos;, java.version: &apos;13.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=/var/folders/xn/1n40nzm97kgdz3pgw7hwy_1w0000kr/T/rust_mozprofile.La3HgDEdZL1j, rotatable=false, moz:geckodriverVersion=0.24.0, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=false, browserVersion=74.0, moz:shutdownTimeout=60000.0, platformVersion=19.0.0, moz:processID=4221.0, browserName=firefox, moz:buildID=20200309095159, javascriptEnabled=true, platformName=mac, setWindowRect=true, moz:webdriverClick=true}]
+Session ID: XXXXXXXX-XXXX-XXXX-XXXX-XXXX16986c4b
+*** Element info: {Using=id, value=Title}
+Command duration or timeout: 0 milliseconds" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Failed to convert data to an object
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;itako2007.prod.miso&apos;, ip: &apos;fe80:0:0:0:1c26:12dd:b30:768c%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.1&apos;, java.version: &apos;13.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=/var/folders/xn/1n40nzm97kgdz3pgw7hwy_1w0000kr/T/rust_mozprofile.La3HgDEdZL1j, rotatable=false, moz:geckodriverVersion=0.24.0, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=false, browserVersion=74.0, moz:shutdownTimeout=60000.0, platformVersion=19.0.0, moz:processID=4221.0, browserName=firefox, moz:buildID=20200309095159, javascriptEnabled=true, platformName=mac, setWindowRect=true, moz:webdriverClick=true}]
+Session ID: XXXXXXXX-XXXX-XXXX-XXXX-XXXX16986c4b
+*** Element info: {Using=id, value=Title}
+Command duration or timeout: 0 milliseconds
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:365)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.sendKeys(Unknown Source)
+	at com.yourcompany.Pages.ContactPage.setFormFieldTitle(ContactPage.java:110)
+	at com.yourcompany.Tests.ContactFormTest.setFormFieldValues(ContactFormTest.java:77)
+	at com.yourcompany.Tests.ContactFormTest.contactFormTest(ContactFormTest.java:47)
+Caused by: org.openqa.selenium.WebDriverException: Failed to convert data to an object
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;itako2007.prod.miso&apos;, ip: &apos;fe80:0:0:0:1c26:12dd:b30:768c%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.1&apos;, java.version: &apos;13.0.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=/var/folders/xn/1n40nzm97kgdz3pgw7hwy_1w0000kr/T/rust_mozprofile.La3HgDEdZL1j, rotatable=false, moz:geckodriverVersion=0.24.0, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=false, browserVersion=74.0, moz:shutdownTimeout=60000.0, platformVersion=19.0.0, moz:processID=4221.0, browserName=firefox, moz:buildID=20200309095159, javascriptEnabled=true, platformName=mac, setWindowRect=true, moz:webdriverClick=true}]
+Session ID: XXXXXXXX-XXXX-XXXX-XXXX-XXXX16986c4b
+*** Element info: {Using=id, value=Title}
+Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
+System info: host: &apos;GC02RH2WYG8WPE&apos;, ip: &apos;192.168.1.107&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;13.0.2&apos;
+Driver info: driver.version: EventFiringWebDriver
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
+	at com.sun.proxy.$Proxy5.findElement(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:48)
+	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</failure>
+  </testcase>
+  <testcase classname="com.yourcompany.Tests.ContactFormTest" name="contactFormTest" time="40.949"/>
+  <testcase classname="com.yourcompany.Tests.ContactFormTest" name="contactFormTest" time="43.162"/>
+  <testcase classname="com.yourcompany.Tests.ContactFormTest" name="contactFormTest" time="43.74"/>
+  <testcase classname="com.yourcompany.Tests.ContactFormTest" name="contactFormTest" time="47.203"/>
+  <testcase classname="com.yourcompany.Tests.ContactFormTest" name="contactFormTest" time="51.964"/>
+</testsuite>
