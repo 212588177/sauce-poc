@@ -136,4 +136,12 @@ public class TestBase  {
     protected void annotate(String text) {
         ((JavascriptExecutor) webDriver.get()).executeScript("sauce:context=" + text);
     }
+
+    private void printSessionId() {
+ 
+        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
+        (((RemoteWebDriver) driver).getSessionId()).toString(), "some job name");
+        System.out.println(message);
+    }     
+
 }
