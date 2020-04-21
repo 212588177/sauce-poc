@@ -29,9 +29,10 @@ public class TestBase  {
     public String buildTag = System.getenv("GE_BUILD_TAG");
     /* Build tag is optional */
 
-    public String username = System.getenv("GE_USERNAME");
-
-    public String accesskey = System.getenv("GE_ACCESS_KEY");
+    // public String username = System.getenv("GE_USERNAME");
+    public String username = System.getenv("SAUCE_USERNAME");
+    // public String accesskey = System.getenv("GE_ACCESS_KEY");
+    public String accesskey = System.getenv("SAUCE_ACCESS_KEY");
 
     /**
      * ThreadLocal variable which contains the  {@link WebDriver} instance which is used to perform browser interactions with.
