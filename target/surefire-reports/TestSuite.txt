@@ -1,75 +1,655 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 30, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 52.761 sec <<< FAILURE!
-contactFormTest(com.yourcompany.Tests.ContactFormTest)  Time elapsed: 37.59 sec  <<< FAILURE!
-org.openqa.selenium.WebDriverException: Failed to convert data to an object
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'itako2007.prod.miso', ip: 'fe80:0:0:0:1c26:12dd:b30:768c%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.1', java.version: '13.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{moz:profile=/var/folders/xn/1n40nzm97kgdz3pgw7hwy_1w0000kr/T/rust_mozprofile.La3HgDEdZL1j, rotatable=false, moz:geckodriverVersion=0.24.0, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=false, browserVersion=74.0, moz:shutdownTimeout=60000.0, platformVersion=19.0.0, moz:processID=4221.0, browserName=firefox, moz:buildID=20200309095159, javascriptEnabled=true, platformName=mac, setWindowRect=true, moz:webdriverClick=true}]
-Session ID: XXXXXXXX-XXXX-XXXX-XXXX-XXXX16986c4b
-*** Element info: {Using=id, value=Title}
-Command duration or timeout: 0 milliseconds
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:365)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy9.sendKeys(Unknown Source)
-	at com.yourcompany.Pages.ContactPage.setFormFieldTitle(ContactPage.java:110)
-	at com.yourcompany.Tests.ContactFormTest.setFormFieldValues(ContactFormTest.java:77)
-	at com.yourcompany.Tests.ContactFormTest.contactFormTest(ContactFormTest.java:47)
-Caused by: org.openqa.selenium.WebDriverException: Failed to convert data to an object
-Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
-System info: host: 'itako2007.prod.miso', ip: 'fe80:0:0:0:1c26:12dd:b30:768c%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.1', java.version: '13.0.1'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{moz:profile=/var/folders/xn/1n40nzm97kgdz3pgw7hwy_1w0000kr/T/rust_mozprofile.La3HgDEdZL1j, rotatable=false, moz:geckodriverVersion=0.24.0, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, moz:headless=false, platform=ANY, moz:accessibilityChecks=false, moz:useNonSpecCompliantPointerOrigin=false, acceptInsecureCerts=false, browserVersion=74.0, moz:shutdownTimeout=60000.0, platformVersion=19.0.0, moz:processID=4221.0, browserName=firefox, moz:buildID=20200309095159, javascriptEnabled=true, platformName=mac, setWindowRect=true, moz:webdriverClick=true}]
-Session ID: XXXXXXXX-XXXX-XXXX-XXXX-XXXX16986c4b
-*** Element info: {Using=id, value=Title}
+Tests run: 60, Failures: 31, Errors: 0, Skipped: 29, Time elapsed: 7.037 sec <<< FAILURE!
+contactFormTest(com.yourcompany.Tests.ContactFormTest)  Time elapsed: 3.28 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'firefox',
+ 'name': 'contactFormTest',
+ 'platform': 'WIN10',
+ 'version': 'latest'}
 Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
 System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
-Driver info: driver.version: EventFiringWebDriver
-	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
-	at org.openqa.selenium.By$ById.findElement(By.java:218)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:104)
-	at com.sun.proxy.$Proxy5.findElement(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver.findElement(EventFiringWebDriver.java:188)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:48)
-	at org.openqa.selenium.remote.server.handler.FindElement.call(FindElement.java:33)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.ContactFormTest.contactFormTest(ContactFormTest.java:28)
+
+tearDown(com.yourcompany.Tests.ContactFormTest)  Time elapsed: 3.28 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at com.yourcompany.Tests.TestBase.tearDown(TestBase.java:133)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:712)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:75)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+
+contactFormTest(com.yourcompany.Tests.ContactFormTest)  Time elapsed: 3.319 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'chrome',
+ 'name': 'contactFormTest',
+ 'platform': 'macOS 10.15',
+ 'version': 'latest-1'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.ContactFormTest.contactFormTest(ContactFormTest.java:28)
+
+verifyPAOIEndpointTest(com.yourcompany.Tests.PAOIEndpointTest)  Time elapsed: 3.32 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'chrome',
+ 'name': 'verifyPAOIEndpointTest',
+ 'platform': 'WIN10',
+ 'version': 'latest-1'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.PAOIEndpointTest.verifyPAOIEndpointTest(PAOIEndpointTest.java:29)
+
+verifyPAOIEndpointTest(com.yourcompany.Tests.PAOIEndpointTest)  Time elapsed: 3.32 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'MicrosoftEdge',
+ 'name': 'verifyPAOIEndpointTest',
+ 'platform': 'WIN10',
+ 'version': 'latest-1'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.PAOIEndpointTest.verifyPAOIEndpointTest(PAOIEndpointTest.java:29)
+
+verifyPAOIEndpointTest(com.yourcompany.Tests.PAOIEndpointTest)  Time elapsed: 3.32 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'firefox',
+ 'name': 'verifyPAOIEndpointTest',
+ 'platform': 'WIN10',
+ 'version': 'latest'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.PAOIEndpointTest.verifyPAOIEndpointTest(PAOIEndpointTest.java:29)
+
+contactFormTest(com.yourcompany.Tests.ContactFormTest)  Time elapsed: 3.32 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'firefox',
+ 'name': 'contactFormTest',
+ 'platform': 'WIN10',
+ 'version': 'latest-1'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.ContactFormTest.contactFormTest(ContactFormTest.java:28)
+
+contactFormTest(com.yourcompany.Tests.ContactFormTest)  Time elapsed: 3.322 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'chrome',
+ 'name': 'contactFormTest',
+ 'platform': 'macOS 10.15',
+ 'version': 'latest'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.ContactFormTest.contactFormTest(ContactFormTest.java:28)
+
+contactFormTest(com.yourcompany.Tests.ContactFormTest)  Time elapsed: 3.353 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'firefox',
+ 'name': 'contactFormTest',
+ 'platform': 'macOS 10.15',
+ 'version': 'latest-1'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.ContactFormTest.contactFormTest(ContactFormTest.java:28)
+
+contactFormTest(com.yourcompany.Tests.ContactFormTest)  Time elapsed: 3.355 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'MicrosoftEdge',
+ 'name': 'contactFormTest',
+ 'platform': 'WIN10',
+ 'version': 'latest'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.ContactFormTest.contactFormTest(ContactFormTest.java:28)
+
+verifyContactLinkTest(com.yourcompany.Tests.FollowLinkTest)  Time elapsed: 3.362 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'chrome',
+ 'name': 'verifyContactLinkTest',
+ 'platform': 'macOS 10.15',
+ 'version': 'latest'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.FollowLinkTest.verifyContactLinkTest(FollowLinkTest.java:29)
+
+verifyContactLinkTest(com.yourcompany.Tests.FollowLinkTest)  Time elapsed: 3.367 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'chrome',
+ 'name': 'verifyContactLinkTest',
+ 'platform': 'WIN10',
+ 'version': 'latest'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.FollowLinkTest.verifyContactLinkTest(FollowLinkTest.java:29)
+
+contactFormTest(com.yourcompany.Tests.ContactFormTest)  Time elapsed: 3.376 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'MicrosoftEdge',
+ 'name': 'contactFormTest',
+ 'platform': 'WIN10',
+ 'version': 'latest-1'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.ContactFormTest.contactFormTest(ContactFormTest.java:28)
+
+verifyContactLinkTest(com.yourcompany.Tests.FollowLinkTest)  Time elapsed: 3.378 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'chrome',
+ 'name': 'verifyContactLinkTest',
+ 'platform': 'WIN10',
+ 'version': 'latest-1'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.FollowLinkTest.verifyContactLinkTest(FollowLinkTest.java:29)
+
+verifyPAOIEndpointTest(com.yourcompany.Tests.PAOIEndpointTest)  Time elapsed: 3.379 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'chrome',
+ 'name': 'verifyPAOIEndpointTest',
+ 'platform': 'macOS 10.15',
+ 'version': 'latest-1'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.PAOIEndpointTest.verifyPAOIEndpointTest(PAOIEndpointTest.java:29)
+
+contactFormTest(com.yourcompany.Tests.ContactFormTest)  Time elapsed: 3.379 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'firefox',
+ 'name': 'contactFormTest',
+ 'platform': 'macOS 10.15',
+ 'version': 'latest'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.ContactFormTest.contactFormTest(ContactFormTest.java:28)
+
+verifyContactLinkTest(com.yourcompany.Tests.FollowLinkTest)  Time elapsed: 3.386 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'firefox',
+ 'name': 'verifyContactLinkTest',
+ 'platform': 'macOS 10.15',
+ 'version': 'latest-1'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.FollowLinkTest.verifyContactLinkTest(FollowLinkTest.java:29)
+
+verifyContactLinkTest(com.yourcompany.Tests.FollowLinkTest)  Time elapsed: 3.39 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'firefox',
+ 'name': 'verifyContactLinkTest',
+ 'platform': 'WIN10',
+ 'version': 'latest'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.FollowLinkTest.verifyContactLinkTest(FollowLinkTest.java:29)
+
+verifyContactLinkTest(com.yourcompany.Tests.FollowLinkTest)  Time elapsed: 3.392 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'chrome',
+ 'name': 'verifyContactLinkTest',
+ 'platform': 'macOS 10.15',
+ 'version': 'latest-1'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.FollowLinkTest.verifyContactLinkTest(FollowLinkTest.java:29)
+
+verifyPAOIEndpointTest(com.yourcompany.Tests.PAOIEndpointTest)  Time elapsed: 3.395 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'firefox',
+ 'name': 'verifyPAOIEndpointTest',
+ 'platform': 'macOS 10.15',
+ 'version': 'latest'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.PAOIEndpointTest.verifyPAOIEndpointTest(PAOIEndpointTest.java:29)
+
+contactFormTest(com.yourcompany.Tests.ContactFormTest)  Time elapsed: 3.402 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'chrome',
+ 'name': 'contactFormTest',
+ 'platform': 'WIN10',
+ 'version': 'latest'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.ContactFormTest.contactFormTest(ContactFormTest.java:28)
+
+verifyPAOIEndpointTest(com.yourcompany.Tests.PAOIEndpointTest)  Time elapsed: 3.403 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'firefox',
+ 'name': 'verifyPAOIEndpointTest',
+ 'platform': 'macOS 10.15',
+ 'version': 'latest-1'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.PAOIEndpointTest.verifyPAOIEndpointTest(PAOIEndpointTest.java:29)
+
+verifyContactLinkTest(com.yourcompany.Tests.FollowLinkTest)  Time elapsed: 3.404 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'MicrosoftEdge',
+ 'name': 'verifyContactLinkTest',
+ 'platform': 'WIN10',
+ 'version': 'latest'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.FollowLinkTest.verifyContactLinkTest(FollowLinkTest.java:29)
+
+verifyContactLinkTest(com.yourcompany.Tests.FollowLinkTest)  Time elapsed: 3.411 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'firefox',
+ 'name': 'verifyContactLinkTest',
+ 'platform': 'WIN10',
+ 'version': 'latest-1'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.FollowLinkTest.verifyContactLinkTest(FollowLinkTest.java:29)
+
+verifyPAOIEndpointTest(com.yourcompany.Tests.PAOIEndpointTest)  Time elapsed: 3.412 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'chrome',
+ 'name': 'verifyPAOIEndpointTest',
+ 'platform': 'macOS 10.15',
+ 'version': 'latest'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.PAOIEndpointTest.verifyPAOIEndpointTest(PAOIEndpointTest.java:29)
+
+verifyContactLinkTest(com.yourcompany.Tests.FollowLinkTest)  Time elapsed: 3.442 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'firefox',
+ 'name': 'verifyContactLinkTest',
+ 'platform': 'macOS 10.15',
+ 'version': 'latest'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.FollowLinkTest.verifyContactLinkTest(FollowLinkTest.java:29)
+
+verifyContactLinkTest(com.yourcompany.Tests.FollowLinkTest)  Time elapsed: 3.764 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'MicrosoftEdge',
+ 'name': 'verifyContactLinkTest',
+ 'platform': 'WIN10',
+ 'version': 'latest-1'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.FollowLinkTest.verifyContactLinkTest(FollowLinkTest.java:29)
+
+verifyPAOIEndpointTest(com.yourcompany.Tests.PAOIEndpointTest)  Time elapsed: 3.817 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'MicrosoftEdge',
+ 'name': 'verifyPAOIEndpointTest',
+ 'platform': 'WIN10',
+ 'version': 'latest'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.PAOIEndpointTest.verifyPAOIEndpointTest(PAOIEndpointTest.java:29)
+
+contactFormTest(com.yourcompany.Tests.ContactFormTest)  Time elapsed: 4.458 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'chrome',
+ 'name': 'contactFormTest',
+ 'platform': 'WIN10',
+ 'version': 'latest-1'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.ContactFormTest.contactFormTest(ContactFormTest.java:28)
+
+verifyPAOIEndpointTest(com.yourcompany.Tests.PAOIEndpointTest)  Time elapsed: 4.716 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'firefox',
+ 'name': 'verifyPAOIEndpointTest',
+ 'platform': 'WIN10',
+ 'version': 'latest-1'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.PAOIEndpointTest.verifyPAOIEndpointTest(PAOIEndpointTest.java:29)
+
+verifyPAOIEndpointTest(com.yourcompany.Tests.PAOIEndpointTest)  Time elapsed: 6.281 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: Unable to parse remote response: Misconfigured -- Sauce Labs Authentication Error.
+You used username 'null' and access key 'null' to authenticate, which are not valid Sauce Labs credentials.
+The following desired capabilities were received:
+{'browserName': 'chrome',
+ 'name': 'verifyPAOIEndpointTest',
+ 'platform': 'WIN10',
+ 'version': 'latest'}
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'GC02RH2WYG8WPE', ip: '192.168.1.107', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.2'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:111)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:132)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:145)
+	at com.yourcompany.Tests.TestBase.createDriver(TestBase.java:116)
+	at com.yourcompany.Tests.PAOIEndpointTest.verifyPAOIEndpointTest(PAOIEndpointTest.java:29)
 

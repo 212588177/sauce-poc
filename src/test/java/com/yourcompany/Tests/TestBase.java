@@ -26,7 +26,7 @@ import java.rmi.UnexpectedException;
  */
 public class TestBase  {
 
-    // public String buildTag = System.getenv("GE_BUILD_TAG");
+    public String buildTag = System.getenv("GE_BUILD_TAG");
     /* Build tag is optional */
 
     // public String username = System.getenv("GE_USERNAME");
@@ -120,18 +120,8 @@ public class TestBase  {
         // set current sessionId
         String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
         sessionId.set(id);
-
-        // Print ID
-        printSessionId();    
-    }
-
-    // Print Session ID to stdout
-    private void printSessionId() {
  
-        String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
-        (((RemoteWebDriver) driver).getSessionId()).toString(), "some job name");
-        System.out.println(message);
-    }         
+    }
 
     /**
      * Method that gets invoked after test.
