@@ -35,7 +35,7 @@ public class ContactPage {
     @FindBy(id="Original_Request__c")
     private WebElement CommentsBox;
     // Opt-out button.  Couldn't just target the radio ID, as it's not actually clickable.
-    @FindBy(css="label[for='mktoRadio_86998_0']")
+    @FindBy(css="label[for^='mktoRadio_']")
     private WebElement OptOutButton;
     @FindBy(css="button.mktoButton")
     private WebElement submitButton;
