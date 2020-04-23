@@ -50,15 +50,13 @@ public class ContactFormTest extends TestBase {
         page.setFormFieldState("KY");
 
         // Attempt to submit form
-        // page.clickSubmitButton();
+        page.clickSubmitButton();
 
         // Wait a couple seconds, then assert that form is no longer visible (Successful submit)
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        //this.annotate("Asserting that form is no longer visible");
-        // Assert.assertEquals(page.formIsVisible(), false, "Form visible = false");
-        //Assert.assertTrue(page.emailInForm() == emailText);
-        String emailText = "test.tester@ge.com";
-        Assert.assertEquals(page.emailInForm(), emailText, "Email in Form Element");
+        this.annotate("Asserting that form is no longer visible");
+        Assert.assertEquals(page.formIsVisible(), false, "Form visible = false");
+
     }
     // Push test values to form
     private void setFormFieldValues(ContactPage page) {
