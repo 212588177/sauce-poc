@@ -121,13 +121,13 @@ public class TestBase  {
         String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
         sessionId.set(id);
 
-        printSessionId();
+        printSessionId(RemoteWebDriver);
  
     }
 
-    private void printSessionId() {
+    private void printSessionId(RemoteWebDriver rwd) {
         String message = String.format("SauceOnDemandSessionID=%1$s job-name=%2$s",
-        (((RemoteWebDriver) driver).getSessionId()).toString(), "some job name");
+        (((rwd) driver).getSessionId()).toString(), "some job name");
         System.out.println(message);
     }
 
