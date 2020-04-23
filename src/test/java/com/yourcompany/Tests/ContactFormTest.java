@@ -52,8 +52,8 @@ public class ContactFormTest extends TestBase {
         // Attempt to submit form
         page.clickSubmitButton();
 
-        // Wait a couple seconds, then assert that form is no longer visible (Successful submit)
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        // Wait five seconds, then assert that form is no longer visible (Successful submit)
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         this.annotate("Asserting that form is no longer visible");
         Assert.assertEquals(page.formIsVisible(), false, "Form visible = false");
 
