@@ -26,7 +26,7 @@ import java.rmi.UnexpectedException;
  */
 public class TestBase  {
 
-    public String buildTag = System.getenv("GE_BUILD_TAG");
+    public String buildTag = System.getenv("BUILD_TAG");
     /* Build tag is optional */
 
     // public String username = System.getenv("GE_USERNAME");
