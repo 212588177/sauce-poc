@@ -1,7 +1,9 @@
 package com.yourcompany.Tests;
 
-import java.util.concurrent.TimeUnit;
 import com.yourcompany.Pages.ContactPage;
+import com.yourcompany.CustomObjects.ContactUsForm;
+
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -41,41 +43,22 @@ public class ContactFormTest extends TestBase {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
         this.annotate("Close Drift Chat");
-        page.closeDriftChat();            
+        page.closeDriftChat();           
+        
+        ContactUsForm theForm = new ContactUsForm(driver, 2189);
 
         this.annotate("Setting form field values");
-        this.setFormFieldValues(page);
+        theForm.enterTestData();
 
         // Attempt to submit form
-        page.clickSubmitButton();
+        theForm.submit();
 
-        // Wait five seconds, then assert that form is no longer visible (Successful submit)
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        // The form should no longer be visible
         this.annotate("Asserting that form is no longer visible");
-        Assert.assertEquals(page.formIsVisible(), false, "Form visible = false");
+        Assert.assertEquals(theForm.isVisible(), false, "Form visible = false");
 
     }
     // Push test values to form
-    private void setFormFieldValues(ContactPage page) {
-        page.setFormFieldContactType("Sales Assistance");
-        String emailTestValue = "test.tester@ge.com";
-        page.setFormFieldEmail(emailTestValue);
-        String firstNameTestValue = "Test";
-        page.setFormFieldFirstName(firstNameTestValue);
-        String lastNameTestValue = "Testerson";
-        page.setFormFieldLastName(lastNameTestValue);
-        page.setFormFieldCountry("United States");
-        page.setFormFieldState("KY");         
-        String companyTestValue = "GE Digital";
-        page.setFormFieldCompany(companyTestValue);
-        String phoneTestValue = "540.555.5555";
-        page.setFormFieldPhone(phoneTestValue);
-        String titleTestValue = "Automated Tester";
-        page.setFormFieldTitle(titleTestValue);
-        page.setFormFieldIndustry("Electronics and Electrical Equipment");       
-        String commentsTestValue = "This is an automated test.  Please disregard.";
-        page.setFormFieldComments(commentsTestValue);
-        page.setFormFieldOptOut();
-    }
+
 
 }

@@ -2,6 +2,7 @@ package com.yourcompany.Tests;
 
 import java.util.concurrent.TimeUnit;
 import com.yourcompany.Pages.ExperientialDemoPage;
+import com.yourcompany.CustomObjects.ExperientialDemoForm;
 import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -12,11 +13,6 @@ import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.rmi.UnexpectedException;
 import java.util.UUID;
-
-
-/**
- * Created by Swilliams on 3/30/2020.
- */
 
 public class ExperientialDemoTest extends TestBase {
 
@@ -46,43 +42,19 @@ public class ExperientialDemoTest extends TestBase {
         page.closeDriftChat();            
 
         this.annotate("Setting form field values");
-        this.setFormFieldValues(page);
-
-        // Attempt to submit form
-        page.clickSubmitButton();
+        ExperientialDemoForm theForm = new ExperientialDemoForm(driver, 4671, true, "demoPersona", "Operator");
+        theForm.setRedirectBehavior(true);
+        theForm.setRedirectDestination("https://www.ge.com/digital/sd/apm-demo/#/");
+        theForm.enterTestData();
+        theForm.submit();
         
-        this.annotate("Waiting for demo redirect...");
-
+        this.annotate("Asserting that we have been redirected");
+        Assert.assertEquals(theForm.hasRedirectedSuccessfully(), true, "Successful Redirect");
         // Assert that we have been redirected
-        WebDriverWait wait = new WebDriverWait(driver, 30);
-        wait.until(ExpectedConditions.urlToBe("https://www.ge.com/digital/sd/apm-demo/#/"));
+        
         
 
     }
-    // Push test values to form
-    private void setFormFieldValues(ExperientialDemoPage page) {
-        String emailTestValue = "test.tester@ge.com";
-        page.setFormFieldEmail(emailTestValue);
-        String firstNameTestValue = "Test";
-        page.setFormFieldFirstName(firstNameTestValue);
-        String lastNameTestValue = "Testerson";
-        page.setFormFieldLastName(lastNameTestValue);
-        page.setFormFieldCountry("United States");
-        page.setFormFieldState("KY");        
-        String companyTestValue = "GE Digital";
-        page.setFormFieldCompany(companyTestValue);
-        String phoneTestValue = "540.555.5555";
-        page.setFormFieldPhone(phoneTestValue);
-        String titleTestValue = "Automated Tester";
-        page.setFormFieldTitle(titleTestValue);
-        page.getPersonaBoxes();
-        page.setAPMPersonaType("Operator");
-        page.setFormFieldIndustry("Electronics and Electrical Equipment");
 
-
-        String commentsTestValue = "This is an automated test.  Please disregard.";
-        page.setFormFieldComments(commentsTestValue);
-        page.setFormFieldOptOut();
-    }
 
 }
