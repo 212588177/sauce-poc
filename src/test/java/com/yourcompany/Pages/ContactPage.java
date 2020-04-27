@@ -81,76 +81,6 @@ public class ContactPage {
         }
     }
 
-    public void setFormFieldEmail(String text) {
-        // 2 Send value to the element
-        emailBox.sendKeys(text);
-      //  submitButton.click();
-    }
-
-    public void setFormFieldFirstName(String text) {
-        // 2 Send value to the element
-        FirstNameBox.sendKeys(text);
-      //  submitButton.click();
-    }    
-
-    public void setFormFieldLastName(String text) {
-        // 2 Send value to the element
-        LastNameBox.sendKeys(text);
-      //  submitButton.click();
-    }        
-
-    public void setFormFieldCompany(String text) {
-        // 2 Send value to the element
-        CompanyBox.sendKeys(text);
-      //  submitButton.click();
-    }        
-    
-    public void setFormFieldTitle(String text) {
-        // 2 Send value to the element
-        TitleBox.sendKeys(text);
-      //  submitButton.click();
-    }            
-
-    public void setFormFieldPhone(String text) {
-        // 2 Send value to the element
-        PhoneBox.sendKeys(text);
-      //  submitButton.click();
-    }        
-    
-    public void setFormFieldComments(String text) {
-        // 2 Send value to the element
-        CommentsBox.sendKeys(text);
-      //  submitButton.click();
-    }            
-
-    // Select "Contact Type" option from dropdown
-    public void setFormFieldContactType(String text) {
-        Select contactDropdown = new Select(contactTypeBox); // Cast DOM element as Select object
-        contactDropdown.selectByVisibleText(text);
-    }
-
-    public void setFormFieldCountry(String text) {
-        Select countryDropdown = new Select(CountryBox); // Cast DOM element as Select object
-        countryDropdown.selectByVisibleText(text);
-    }
-    
-    public void setFormFieldIndustry(String text) {
-        Select industryDropdown = new Select(IndustryBox); // Cast DOM element as Select object
-        industryDropdown.selectByVisibleText(text);
-    }    
-
-    public void setFormFieldOptOut() {
-            OptOutButton.click();
-    }
-
-    public void setFormFieldState(String text) {
-        if(driver.findElements(By.id("State")).size() > 0) {
-            WebElement stateDropdownBox = driver.findElement(By.id("State"));
-            Select stateDropdown = new Select(stateDropdownBox);
-            stateDropdown.selectByVisibleText(text);
-        }
-    }
-
     public void closeDriftChat() {
         boolean driftIsPresent = driver.findElements(By.id("drift-widget")).size() > 0;
         if(driftIsPresent) {
@@ -163,17 +93,9 @@ public class ContactPage {
 
     }
 
-
     public String emailInForm(){
         String inForm = emailBox.getAttribute("value");
         return inForm;
     }
 
-    public void clickSubmitButton() {
-        submitButton.click();
-    }
-
-    public boolean formIsVisible() {
-        return formContainer.isDisplayed();
-    }
 }

@@ -58,7 +58,5 @@ public class ContactFormTest extends TestBase {
         Assert.assertEquals(theForm.isVisible(), false, "Form visible = false");
 
     }
-    // Push test values to form
-
 
 }
