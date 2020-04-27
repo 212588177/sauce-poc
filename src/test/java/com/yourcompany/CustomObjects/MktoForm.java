@@ -84,7 +84,7 @@ public class MktoForm {
 
     public boolean isVisible() {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, 2);
+            WebDriverWait wait = new WebDriverWait(driver, 15);
             wait.until(ExpectedConditions.invisibilityOf(this.container));
             return false;
         }
