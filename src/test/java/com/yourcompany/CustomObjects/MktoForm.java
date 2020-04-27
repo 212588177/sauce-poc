@@ -95,7 +95,7 @@ public class MktoForm {
 
     public boolean hasRedirectedSuccessfully() {
         try {
-            WebDriverWait wait = new WebDriverWait(this.driver, 10);
+            WebDriverWait wait = new WebDriverWait(this.driver, 15);
             wait.until(ExpectedConditions.urlToBe(this.redirectDestination));
             return true;
         }
