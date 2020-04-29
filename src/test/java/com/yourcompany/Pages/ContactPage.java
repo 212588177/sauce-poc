@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.support.ui.Select; // Added for select box functionality
 
 public class ContactPage {
@@ -73,24 +74,32 @@ public class ContactPage {
         this.driver.get(url);
     }
 
-    // public void followPAOIEndPoint(){ this.driver.get(paoiWebhook);}
-
-    public void acceptCookies(){
-        if(cookieAccept.isDisplayed()) {
+    public boolean acceptCookies(){
+        try {
+            WebDriverWait wait = new WebDriverWait(this.driver, 60);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("_evidon-accept-button")));
+            WebElement cookieAccept = driver.findElement(By.id("_evidon-accept-button"));
             cookieAccept.click();
+            return true;
         }
+        catch(TimeoutException e) {
+            return false;
+        }        
     }
 
-    public void closeDriftChat() {
-        boolean driftIsPresent = driver.findElements(By.id("drift-widget")).size() > 0;
-        if(driftIsPresent) {
-                driver.switchTo().frame(driver.findElement(By.id("drift-widget")));
-                if(driver.findElements(By.cssSelector("button[aria-label='Dismiss']")).size() > 0) {
-                    driver.findElement(By.cssSelector("button[aria-label='Dismiss']")).click();
-                }
-                driver.switchTo().parentFrame();
+    public boolean closeDriftChat() {
+        try {
+            WebDriverWait wait = new WebDriverWait(this.driver, 60);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("drift-widget")));
+                driver.switchTo().frame(driver.findElement(By.id("drift-widget"))); // Drift stuff lives in an iFrame
+                WebElement driftClose = driver.findElement(By.cssSelector("button[aria-label='Dismiss']"));            
+                driftClose.click();
+                driver.switchTo().parentFrame(); // Return to parent frame
+            return true;
         }
-
+        catch(TimeoutException e) {
+            return false;
+        }
     }
 
     public String emailInForm(){

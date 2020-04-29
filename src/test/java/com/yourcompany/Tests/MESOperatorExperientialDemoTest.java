@@ -14,37 +14,35 @@ import java.net.MalformedURLException;
 import java.rmi.UnexpectedException;
 import java.util.UUID;
 
-public class ExperientialDemoTest extends TestBase {
+public class MESOperatorExperientialDemoTest extends TestBase {
 
     /**
      * Runs a simple test verifying search function.
      * @throws InvalidElementStateException
      */
     @org.testng.annotations.Test(dataProvider = "hardCodedBrowsers")
-    public void ExperientialDemoTest(String browser, String version, String os, Method method)
+    public void MESOperatorExperientialDemoTest(String browser, String version, String os, Method method)
             throws MalformedURLException, InvalidElementStateException, UnexpectedException {
         this.createDriver(browser, version, os, method.getName());
         WebDriver driver = this.getWebDriver();
 
         this.annotate("Visiting  page...");
-        ExperientialDemoPage page = ExperientialDemoPage.visitPage(driver);         
+        //ExperientialDemoPage page = ExperientialDemoPage.visitPage(driver);         
 
-        this.annotate("Giving Evidon a chance to load...");        
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        ExperientialDemoPage page = new ExperientialDemoPage(driver, "https://www.ge.com/digital/lp/explore-ge-digitals-mes-software-demo");
 
-        this.annotate("Accept Cookies");
-        page.acceptCookies();
-        
-        this.annotate("Giving Drift a chance to load...");
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        if(page.acceptCookies()) {
+            this.annotate("Accepting cookies.");
+        }
 
-        this.annotate("Close Drift Chat");
-        page.closeDriftChat();            
+        if(page.closeDriftChat()) {
+            this.annotate("Closing Drift chat.");
+        }      
 
         this.annotate("Setting form field values");
-        ExperientialDemoForm theForm = new ExperientialDemoForm(driver, 4671, true, "demoPersona", "Operator");
+        ExperientialDemoForm theForm = new ExperientialDemoForm(driver, 4671, true, "demoPersonaMES", "Operator");
         theForm.setRedirectBehavior(true);
-        theForm.setRedirectDestination("https://www.ge.com/digital/sd/apm-demo/#/");
+        theForm.setRedirectDestination("https://www.ge.com/digital/sd/mes-demo/#/chapter/operator/intro");
         theForm.enterTestData();
         theForm.submit();
         

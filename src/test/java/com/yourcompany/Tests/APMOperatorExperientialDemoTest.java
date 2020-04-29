@@ -1,37 +1,34 @@
 package com.yourcompany.Tests;
 
-import com.yourcompany.Pages.ContactPage;
-import com.yourcompany.CustomObjects.ContactUsForm;
-
 import java.util.concurrent.TimeUnit;
+import com.yourcompany.Pages.ExperientialDemoPage;
+import com.yourcompany.CustomObjects.ExperientialDemoForm;
 import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.rmi.UnexpectedException;
 import java.util.UUID;
 
-
-/**
- * Created by Swilliams on 3/30/2020.
- */
-
-public class ContactFormTest extends TestBase {
+public class APMOperatorExperientialDemoTest extends TestBase {
 
     /**
      * Runs a simple test verifying search function.
      * @throws InvalidElementStateException
      */
     @org.testng.annotations.Test(dataProvider = "hardCodedBrowsers")
-    public void contactFormTest(String browser, String version, String os, Method method)
+    public void APMOperatorExperientialDemoTest(String browser, String version, String os, Method method)
             throws MalformedURLException, InvalidElementStateException, UnexpectedException {
         this.createDriver(browser, version, os, method.getName());
         WebDriver driver = this.getWebDriver();
 
         this.annotate("Visiting  page...");
-        ContactPage page = ContactPage.visitPage(driver);         
+        //ExperientialDemoPage page = ExperientialDemoPage.visitPage(driver,"https://www.ge.com/digital/lp/apm-demo");         
+        ExperientialDemoPage page = new ExperientialDemoPage(driver, "https://www.ge.com/digital/lp/apm-demo");
 
         if(page.acceptCookies()) {
             this.annotate("Accepting cookies.");
@@ -39,20 +36,22 @@ public class ContactFormTest extends TestBase {
 
         if(page.closeDriftChat()) {
             this.annotate("Closing Drift chat.");
-        }     
+        }
         
-        ContactUsForm theForm = new ContactUsForm(driver, 2189);
-
         this.annotate("Setting form field values");
+        ExperientialDemoForm theForm = new ExperientialDemoForm(driver, 4671, true, "demoPersona", "Operator");
+        theForm.setRedirectBehavior(true);
+        theForm.setRedirectDestination("https://www.ge.com/digital/sd/apm-demo/#/");
         theForm.enterTestData();
-
-        // Attempt to submit form
         theForm.submit();
-
-        // The form should no longer be visible
-        this.annotate("Asserting that form is no longer visible");
-        Assert.assertEquals(theForm.isVisible(), false, "Form visible = false");
+        
+        this.annotate("Asserting that we have been redirected");
+        Assert.assertEquals(theForm.hasRedirectedSuccessfully(), true, "Successful Redirect");
+        // Assert that we have been redirected
+        
+        
 
     }
+
 
 }

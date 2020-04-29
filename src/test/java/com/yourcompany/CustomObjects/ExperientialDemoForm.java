@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class ExperientialDemoForm extends MktoForm {
 
     private WebElement personaDropdownBox;
+    private WebElement commentsBox;
     private String personaSelection;
 
     public ExperientialDemoForm(WebDriver driver, int id, boolean hasPersona, String personaElement, String personaSelection) {
@@ -26,6 +27,19 @@ public class ExperientialDemoForm extends MktoForm {
 
     protected void buildFormElements(String personaElement, String personaSelection) {
         super.buildFormElements();
+        this.buildCommentsBoxElement();  
+    }
+
+    private void buildCommentsBoxElement() {
+        this.commentsBox = this.driver.findElement(By.id("Original_Request__c"));
+    }        
+
+    public void enterTestData() {
+        super.enterTestData();
+        setCommentsText();  
+        if(this.personaDropdownBox != null) {
+            selectPersonaElement();      
+        }
     }
 
     private void selectPersonaElement() {
@@ -33,9 +47,9 @@ public class ExperientialDemoForm extends MktoForm {
         personaDropdown.selectByVisibleText(this.personaSelection);
     }
 
-    public void enterTestData() {
-        super.enterTestData();
-        selectPersonaElement();        
-    }
+    private void setCommentsText() {
+        this.buildCommentsBoxElement(); // TODO:  Figure out why this line prevents NPE  
+        commentsBox.sendKeys("This is an automated test.  Please disregard.");
+    }    
 
 }
